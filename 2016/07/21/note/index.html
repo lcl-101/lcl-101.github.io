@@ -158,14 +158,14 @@
 
                         
                         <li>
-                            <a href="/portfolio/">Portfolio</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/portfolio/">Portfolio</a>
                         </li>
                         
                     
@@ -285,8 +285,6 @@
 
                 <hr>
 
-                
-
                 <ul class="pager">
                     
                         <li class="previous">
@@ -300,16 +298,16 @@
                     
                 </ul>
 
-                
-
-                
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                
-
+                <!-- 代码1：放在页面需要展示的位置  -->
+                <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
+                <div id="cyEmoji" role="cylabs" data-use="emoji" sid="{{page.id}}" style="margin-top:20px;"></div>
+                <!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
+                <!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
+                <!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
+                <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+                <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysTD59xU"></script>
+                <!--畅言PC和WAP自适应版-->
+                <div id="SOHUCS" sid="{{page.id}}"></div>
             </div>
 
     <!-- Sidebar Container -->
@@ -353,25 +351,15 @@
     </div>
 </article>
 
-
-
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<!--畅言PC和WAP自适应版-->
 <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "https://lcl-101.github.io/2016/07/21/note/";
-    var disqus_url = "https://lcl-101.github.io/2016/07/21/note/";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+  (function(){
+    var appid = 'cysTD59xU';
+    var conf = 'prod_ce29600c8a6f4fba16719fa671806140';
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+  })();
 </script>
-<!-- disqus 公共JS代码 end -->
-
-
 
 
 <!-- async load function -->
@@ -467,13 +455,13 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; LiChengLong 2019 
+                    Copyright &copy; LiChengLong 2019
                     <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    Theme by <a href="http://huangxuan.me">Hux</a>
                     <span style="display: inline-block; margin: 0 5px;">
                         <i class="fa fa-heart"></i>
-                    </span> 
-                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    </span>
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> |
                     <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true">
                     </iframe>
                 </p>
@@ -504,14 +492,14 @@
     }
 </script>
 
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
      so Huxblog drops it officially.
 
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
 -->
 <!--
     <script>
@@ -551,8 +539,8 @@
 
 <script>
     // dynamic User by Hux
-    var _gaId = 'UA-80711026-1';
-    var _gaDomain = 'auto';
+    var _gaId = '{{ site.ga_track_id }}';
+    var _gaDomain = '{{ site.ga_domain }}';
 
     // Originial
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -566,12 +554,11 @@
 
 
 
-
 <!-- Baidu Tongji -->
 
 <script>
     // dynamic User by Hux
-    var _baId = '2f96ace42ba3147a98026afaf0265ac3';
+    var _baId = '{{ site.ba_track_id }}';
 
     // Originial
     var _hmt = _hmt || [];
@@ -582,8 +569,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
-
-
 
 
 
