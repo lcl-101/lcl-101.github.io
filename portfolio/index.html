@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="关于前端与设计 | 这里是 @LCL 李成龙 的个人博客，与你一起发现更大的世界。">
+    <meta name="keyword" content="LCL Blog, 个人网站, 互联网, 前端, 设计, 产品 ,李成龙 ,博客 ,微博,前端工程师,web,pc,html,css,js">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Portfolio - 李成龙的博客 | Lcl Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://lcl-101.github.io/portfolio/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/')
+            /*page*/
+        
+    }
+    
+</style>
+
+<header class="intro-header header-top">
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>Portfolio</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">李成龙的博客 | Lcl Blog</span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Lcl Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/portfolio/">Portfolio</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<link rel="stylesheet" type="text/css" href="/portfolio/css/timeline.css">
+<link rel="stylesheet" type="text/css" href="/portfolio/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="/portfolio/css/default.css">
+<script src="/portfolio/js/modernizr.custom.js"></script>
+<style>
+  header.intro-header {
+    display: none;
+  }
+  #canvas{
+    width:100%;
+    height:620px;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: #6ca8fb;
+  }
+  #canvas canvas {
+    height: 620px!important;
+  }
+  .canvas-content{
+    position:relative;
+    z-index:2000;
+    color:#fff;
+    text-align:center;
+    padding-top:30px;
+  }
+  .ds-comments-tab-weibo {
+    display: none!important;
+  }
+  @media only screen and (max-width:510px) {
+    #ds-smilies-tooltip {
+      width: 62%!important;
+    }
+  }
+  @media only screen and (max-width:400px) {
+    #ds-smilies-tooltip {
+      width: 70%!important;
+    }
+  }
+  @media only screen and (max-width:360px) {
+    #ds-smilies-tooltip {
+      width: 67%!important;
+    }
+  }
+  @media only screen and (max-width:330px) {
+    #ds-smilies-tooltip {
+      width: 66%!important;
+    }
+  }
+  @media only screen and (max-width:325px) {
+    #ds-smilies-tooltip {
+      width: 62%!important;
+    }
+  }
+</style>
+<body>
+  <header class="canvas-wrap">
+    <div class="canvas-content">
+      <img width="190" height="190" src="images/lcl.jpg">
+      <h1>LCL</h1>
+      <p>前端工程师<br>项目列表</p>
+    </div>
+    <div id="canvas" class="gradient">
+
+    </div>
+  </header>
+  <div class="container" style="margin:0;padding:0;width:100%;">
+    <div class="main">
+      <ul class="cbp_tmtimeline">
+        <li>
+          <div class="cbp_tmlabel">
+            <h2 id="boxoffice">旺财谷</h2>
+            <time>2016</time>
+            <img src="images/wcg.png">
+            <ul>
+              <li>旺财谷，<a target="_blank" href="https://www.wangcaigu.com/">www.wangcaigu.com</a>，专业的应收账款融资与理财平台，是由南京易投贷金融信息服务有限公司运营的互联网金融F2B平台，以信息撮合为核心，一端对接有投资理财需求的各类理财者，提供安全、便捷、收益可观的理财产品，一端对接有融资需求的中小微企业，提供专业、便捷、高效的融资渠道，推动直接融资，践行普惠金融，助力中国实体经济的发展。</li>
+              <li class="skill">
+                <span class="cbp_tmicon-phone"></span>
+                <span><b>PC</b></span>
+                <span class="i-react"></span>
+                <span class="link"><a target="_blank" href="https://www.wangcaigu.com/">Try it</a></span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="cbp_tmlabel">
+            <h2 id="boxoffice">温都金服wap端</h2>
+            <time>2016</time>
+            <img src="images/wenjf.png">
+            <ul>
+              <!--<li>-->
+              <!--Wepiao Boxoffice app provides huge amounts of data and visualization of movies and cinemas including times, box office, attendance, ranking with a real-time analyzing back-end, which available on Web, iOS and Android.<br> As the <b>Lead Front-end Developer this project</b>, we built this app in the <a href="https://en.wikipedia.org/wiki/Single-page_application">Single-page Application Model</a> to provide a more fluid user experience with awesome <a href="http://facebook.github.io/react/">React.js</a>-->
+              <!--</li>-->
+              <li>温州温都金融信息服务股份有限公司简称<a target="_blank" href="https://m.wenjf.com/">“温都金服”</a>，是温州报业传媒旗下的理财平台，为国内传统“纸媒”行业首创，是响应国家“十二五”规划和时代潮流的创新平台，也是温州作为沿海经济和产业先驱所迈出的重要一步，是温州响应新时代发展战略的创新举措。</li>
+              <li class="skill">
+                <span class="cbp_tmicon-phone"></span>
+                <span><b>WAP</b></span>
+                <span class="i-react"></span>
+                <span class="link"><a target="_blank" href="https://m.wenjf.com/">Look at it</a></span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="cbp_tmlabel">
+            <h2 id="boxoffice">温都金服pc端</h2>
+            <time>2016</time>
+            <img src="images/wenjfpc.png">
+            <ul>
+              <li>温州温都金融信息服务股份有限公司简称<a target="_blank" href="https://www.wenjf.com/">“温都金服”</a>，是温州报业传媒旗下的理财平台，为国内传统“纸媒”行业首创，是响应国家“十二五”规划和时代潮流的创新平台，也是温州作为沿海经济和产业先驱所迈出的重要一步，是温州响应新时代发展战略的创新举措。</li>
+              <li class="skill">
+                <span class="cbp_tmicon-phone"></span>
+                <span><b>PC</b></span>
+                <span class="i-react"></span>
+                <span class="link"><a target="_blank" href="https://www.wenjf.com/">Look at it</a></span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <!--畅言PC和WAP自适应版-->
+          <div id="SOHUCS" sid="/portfolio"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--畅言PC和WAP自适应版-->
+  <script type="text/javascript">
+    (function(){
+      var appid = 'cysTD59xU';
+      var conf = 'prod_ce29600c8a6f4fba16719fa671806140';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+      })();
+  </script>
+</body>
+
+<script src="/portfolio/js/jquery.min.js "></script>
+<!--基于three.js的炫酷Canvas 3D线条动画特效-->
+<!-- Main library -->
+<script src="/portfolio/js/three.min.js"></script>
+<!-- Helpers -->
+<script src="/portfolio/js/projector.js"></script>
+<script src="/portfolio/js/canvas-renderer.js"></script>
+<!-- Visualitzation adjustments -->
+<script src="/portfolio/js/3d-lines-animation.js"></script>
+<script src="/portfolio/js/color.js"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/li-cheng-long-3-99">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/3932790473">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/100009375981606">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/lcl-101">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; LiChengLong 2019 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://lcl-101.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-80711026-1';
+    var _gaDomain = 'auto';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '2f96ace42ba3147a98026afaf0265ac3';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://lcl-101.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
