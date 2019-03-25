@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="关于前端与设计 | 这里是 @LCL 李成龙 的个人博客，与你一起发现更大的世界。">
+    <meta name="keyword" content="LCL Blog, 个人网站, 互联网, 前端, 设计, 产品 ,李成龙 ,博客 ,微博,前端工程师,web,pc,html,css,js">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          论css的重要性 - 李成龙的博客 | Lcl Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://lcl-101.github.io/2018/05/19/tour/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('post-bg-digital-native.jpg')
+            /*post*/
+        
+    }
+    
+</style>
+
+<header class="intro-header header-top">
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#play" title="play">play</a>
+                            
+                        </div>
+                        <h1>论css的重要性</h1>
+                        <h2 class="subheading"> </h2>
+                        <span class="meta">
+                            Posted by lcl on
+                            2018-05-19
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Lcl Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/portfolio/">Portfolio</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <blockquote>
+<p>天津一日游方案</p>
+</blockquote>
+<h2><span id="方案一">方案一：</span></h2>
+<ol>
+<li>可以先去天津<a href="https://baike.baidu.com/link?url=L3wfZE9LH37wMm91jraHr-0s4nsFF1vM5V5ixhswt-fBU7NwSdcCqU0ek3EkWiq2I_eYZrxkAQPCtzZ6695FSq4Yd4-3DEK6MEfK-1BDc55B-SLbwCasF7eo1cMHc-hBDNJOyESY1OL9nmq7ko0bTg8e7JKQGCbgVSrwrnJ-80a" target="_blank" rel="noopener">意大利</a>风情街 游玩时间大概2-3个小时，路途中，可以去看看天津的世纪钟<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-710f40d3df256c8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+在贴几张意大利风情街的美图<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-9c5c34b5b17440d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-525b750792018c5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li>差不多上午就在这里了，下午可以考虑去天津意<a href="http://baike.baidu.com/link?url=zpp2rSEgTJsolNHn_BmSYsB5_qrGh8Zum8AUjuVdrHerNtZGgsGLKrhvYHZ5B3JDMOwjOfj4mN3o0B7h-vdcDeZfPMwM0xYLNLFHols7iQJ5Y6k1EiBhggziSmNNUK6HSy5hXz6bhvKSSqf5EsGqh_" target="_blank" rel="noopener">劝业场</a>，可以打车过去，<br>
+天津劝业场位于和平区交口的商业中心区<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-7fadb0acc2b53ca5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+这里就是一整条街的商场，可以慢慢逛，游玩时间差不多3-4个小时，贴几这里的图片<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-5ab994a67c424a6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-0c1d2c93fbbdf28a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+这个蜡笔小心就只卖100多，下次去了一定要买一个哈哈<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-6bbbc2d5c4a026b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li>到晚上可以去<a href="https://baike.baidu.com/link?url=Qjmw59Ox_w7fqV-nwjYvl_2NQ792W-IdMEVWg1RootVLcI4tZQrqWLIWHjn4jIW1p6gqN7xJh830QM86P_-MNEY94W4UeNujq5O8utvL9rDNy677cHCQ9vMwq9uDYcgZ" target="_blank" rel="noopener">天津之眼</a>，可以选择骑行或坐车都可以<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-46d3d12705fa750e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+骑行或走路可以欣赏河边的风景也不错，晚上河边还有唱歌的<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-dbf096f1a96a9c6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+晚上的天津之眼真的太美了<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-6cba46c94e0def9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+</ol>
+<h2><span id="方案二">方案二</span></h2>
+<ol>
+<li>天津<a href="https://baike.baidu.com/link?url=a6ja62f90ZNG6AnpUXL4o3VjHz1oHzdnvlmnII1IUFhG9tvz5LD0Ft8RzpCg-PDJhkJ2DPzfFRw9bAAeb375LDVIixIJ8gVyNnc7xGpJJiNqYsVlCA7TmP340B55n6hOjyRxvBJ4DtV0FQhkycbwEq" target="_blank" rel="noopener">古文化街</a>，街道以天后宫为中心，全长580米，是津门十景之一。游玩时间差不多一小时左右<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-f93385945b66b0e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-ba09226ab1ded602.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li><a href="https://baike.baidu.com/link?url=pode56ynDvhuQ0Thnf-yFqzah76Q04MtM99Ui7j698_ARZdf-1EjFfwl8p8sIuGboslPyVKSqMQDCaCS2i-bSC_PrvOsRb-kthZubsUpG4EDVLexWNN0ZIY_-H-Cfsogx40noyr6NxBEGIIanNIBXxOq71C-DYl-5e0sxwfo0BAyA5iSsEuYlpMI-dO0S3GQBYZWZhm6jekVNzUD5OPwOK" target="_blank" rel="noopener">瓷房子</a>，一座动用了无数私藏古瓷器、汉白玉石雕、水晶、玛瑙、古董装饰而成的法式建筑，游览时间差不多是一个小时左右<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-e2941756468f64f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-315e6c70ba8e1d63.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+剩下的时间可以逛逛劝业场，和天津之眼</li>
+</ol>
+<h4><span id="方案三">方案三</span></h4>
+<ol>
+<li><a href="https://baike.baidu.com/link?url=snNj2tbmZTXaBhb6xOXFx3-jVYHuqqLrQu4t1l4LUjP4r6aEniQD8EC2P1TWtCER9LlMYEDSrviW8VqWtJIC5UV4ZGK7m16AKa7Xm6hCUnzWBgREW1Fmp6DlRxUBDz2DquNt741T95ZIEvfBloUqAFrwKJd4CszVxvgwxVMrMDjWy59ksxq9grrd6k0QkcjCJV8Tmft7j-7Jg6aI1Tz_Ua" target="_blank" rel="noopener">天津海昌极地海洋公园</a>，场馆的外造型犹如一只巨大的鲸鱼，游进海河湾，游玩时间差不多要4个小时左右<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-bb633cf9145f0a1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+天津海昌极地海洋公园由极地动物展区、海洋动物展区、海底世界、无水海洋、<a href="https://baike.baidu.com/item/%E9%B2%A8%E9%B1%BC/40174" target="_blank" rel="noopener">鲨鱼</a>展区、<a href="https://baike.baidu.com/item/%E7%8F%8A%E7%91%9A/7337" target="_blank" rel="noopener">珊瑚</a>展区、<a href="https://baike.baidu.com/item/%E6%B0%B4%E6%AF%8D/1961" target="_blank" rel="noopener">水母</a>展区、科普互动展区、表演场（欢乐剧场）九大展区组成。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-0ae85153ef82eddc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>
+这里节假日人可能比较多，到景点里可能需要排一会队<br>
+<img src="https://upload-images.jianshu.io/upload_images/4450341-6e68bfbfd1c7141e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+</ol>
+<h4><span id="点击跳到天津地图">点击跳到</span></h4>
+
+
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/07/12/smallprogram/" data-toggle="tooltip" data-placement="top" title="小程序问题搜集">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/03/22/password/" data-toggle="tooltip" data-placement="top" title="浏览器自动填充表单问题">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+                <!-- 代码1：放在页面需要展示的位置  -->
+                <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
+                <div id="cyEmoji" role="cylabs" data-use="emoji" sid="{{page.id}}" style="margin-top:20px;"></div>
+                <!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
+                <!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
+                <!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
+                <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+                <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysTD59xU"></script>
+                <!--畅言PC和WAP自适应版-->
+                <div id="SOHUCS" sid="{{page.id}}"></div>
+            </div>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">方案一：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">方案二</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.0.1.</span> <span class="toc-nav-text">方案三</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.0.2.</span> <span class="toc-nav-text">点击跳到</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#play" title="play">play</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://chengfangpeng.win/" target="_blank">X_ray</a></li>
+                    
+                        <li><a href="http://iliubang.github.io/" target="_blank">刘邦</a></li>
+                    
+                        <li><a href="http://chbless.github.io/blog" target="_blank">陈辉</a></li>
+                    
+                        <li><a href="https://lcl101.cn/" target="_blank">李成龙</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!--畅言PC和WAP自适应版-->
+<script type="text/javascript">
+  (function(){
+    var appid = 'cysTD59xU';
+    var conf = 'prod_ce29600c8a6f4fba16719fa671806140';
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+  })();
+</script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/li-cheng-long-3-99">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/3932790473">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/100009375981606">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/lcl-101">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; LiChengLong 2019
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://lcl-101.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = '{{ site.ga_track_id }}';
+    var _gaDomain = '{{ site.ga_domain }}';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '{{ site.ba_track_id }}';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+	<!-- <a id="rocket" href="#top" class=""></a> -->
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+</body>
+
+</html>

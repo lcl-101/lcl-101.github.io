@@ -209,6 +209,215 @@
 
 <div class="post-preview">
 
+    <a href="/2019/01/11/operator/">
+        <h2 class="post-title">
+            位运算符
+        </h2>
+        <h3 class="post-subtitle">
+             
+        </h3>
+        <div class="post-content-preview">
+            &amp; 按位与 (0为false,1为true)
+
+对应位同为1位1
+
+ 1 &amp; 3的结果为1
+ 1的二进制表示为 0 0 0 0 0 0 1
+ 3的二进制表示为 0 0 0 0 0 1 1
+ 0 0 0 0 0 0 1
+ and
+ 0 0 0 0 0 1 1
+ =
+ 0 0 0 0 0 0 1
+
+| 按位或
+
+对应位中任意一个为1,则值为1
+
+ 1 | 3的结果为3
+ 0 0 ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by lcl on
+            2019-01-11
+        </p>
+        <!-- <div class="tags">
+            
+              <a href="/tags/#js" title="js">js</a>
+            
+        </div> -->
+    
+
+</div>
+
+<hr>
+
+
+<div class="post-preview">
+
+    <a href="/2019/01/08/throttle/">
+        <h2 class="post-title">
+            js 节流函数
+        </h2>
+        <h3 class="post-subtitle">
+             
+        </h3>
+        <div class="post-content-preview">
+            
+在浏览器中,会经常频繁的超控DOM,导致渲染变慢,甚至浏览器奔溃.
+
+
+测试场景
+window对象的resize、scroll事件
+
+在《JavaScript高级程序设计》中有专门应对此问题的函数节流
+123456function throttle(method,context)&#123;      clearTimeout(method.tId);      method.tId=se......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by lcl on
+            2019-01-08
+        </p>
+        <!-- <div class="tags">
+            
+              <a href="/tags/#js" title="js">js</a>
+            
+        </div> -->
+    
+
+</div>
+
+<hr>
+
+
+<div class="post-preview">
+
+    <a href="/2018/07/19/css/">
+        <h2 class="post-title">
+            论css的重要性
+        </h2>
+        <h3 class="post-subtitle">
+             
+        </h3>
+        <div class="post-content-preview">
+            没有什么比图片更有说服力了
+
+...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by lcl on
+            2018-07-19
+        </p>
+        <!-- <div class="tags">
+            
+              <a href="/tags/#css" title="css">css</a>
+            
+        </div> -->
+    
+
+</div>
+
+<hr>
+
+
+<div class="post-preview">
+
+    <a href="/2018/07/12/smallprogram/">
+        <h2 class="post-title">
+            小程序问题搜集
+        </h2>
+        <h3 class="post-subtitle">
+             
+        </h3>
+        <div class="post-content-preview">
+            
+开发过程中收录的小程序问题
+
+
+强制要求请求全部为https
+小程序有自己定义的标签，且不支持HTML标签
+web-view
+
+打开的域名没有在小程序管理后台设置业务域名（注意是业务域名，不是服务器域名）
+web-view空白问题，请升级微信客户端到 6.5.16
+打开的页面必须为https服务
+页面可以包含iframe，但是iframe的地址必须为业务域名
+兼容
+
+基础库 1.6.4 开......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by lcl on
+            2018-07-12
+        </p>
+        <!-- <div class="tags">
+            
+              <a href="/tags/#小程序" title="小程序">小程序</a>
+            
+        </div> -->
+    
+
+</div>
+
+<hr>
+
+
+<div class="post-preview">
+
+    <a href="/2018/05/19/tour/">
+        <h2 class="post-title">
+            论css的重要性
+        </h2>
+        <h3 class="post-subtitle">
+             
+        </h3>
+        <div class="post-content-preview">
+            
+天津一日游方案
+
+方案一：
+
+可以先去天津意大利风情街 游玩时间大概2-3个小时，路途中，可以去看看天津的世纪钟
+
+在贴几张意大利风情街的美图
+
+
+差不多上午就在这里了，下午可以考虑去天津意劝业场，可以打车过去，
+天津劝业场位于和平区交口的商业中心区
+
+这里就是一整条街的商场，可以慢慢逛，游玩时间差不多3-4个小时，贴几这里的图片
+
+
+这个蜡笔小心就只卖100多，下次去了一定要买一个哈哈
+......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by lcl on
+            2018-05-19
+        </p>
+        <!-- <div class="tags">
+            
+              <a href="/tags/#play" title="play">play</a>
+            
+        </div> -->
+    
+
+</div>
+
+<hr>
+
+
+<div class="post-preview">
+
     <a href="/2017/03/22/password/">
         <h2 class="post-title">
             浏览器自动填充表单问题
@@ -377,9 +586,9 @@ js部分
             
               <a href="/tags/#javascript" title="javascript">javascript</a>
             
-              <a href="/tags/#html" title="html">html</a>
-            
               <a href="/tags/#css" title="css">css</a>
+            
+              <a href="/tags/#html" title="html">html</a>
             
         </div> -->
     
@@ -420,43 +629,6 @@ js部分
 
 </div>
 
-<hr>
-
-
-<div class="post-preview">
-
-    <a href="/2016/07/12/hello2016/">
-        <h2 class="post-title">
-            Hello 2016
-        </h2>
-        <h3 class="post-subtitle">
-             "Hello World, Hello Blog"
-        </h3>
-        <div class="post-content-preview">
-            
-“It’s my style. ”
-
-前言
-研究了好一会，终于把博客开通了，在这里很感谢hux提供的模版，供我们参考。
-跳过废话，直接看技术实现 
-2016 年，Lcl的博客终于开通了。
-从开始工作，就一想做一些的东西，但在大众博客上感觉没有大多意思，就像自己做一些东西，研究研究，正好github提供了这个平台，github page，对于程序员来说，这个着实有趣，自己用了两天的时间把它弄......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by lcl on
-            2016-07-12
-        </p>
-        <!-- <div class="tags">
-            
-              <a href="/tags/#生活" title="生活">生活</a>
-            
-        </div> -->
-    
-
-</div>
-
 
 
 
@@ -464,6 +636,10 @@ js部分
 
 <ul class="pager">
     
+    
+        <li class="next">
+            <a href="/archives/2/">Older Posts &rarr;</a>
+        </li>
     
 </ul>
 
@@ -490,9 +666,19 @@ js部分
             
         
             
+            <a href="/tags/#css" title="css" rel="2">css</a>
+            
+        
+            
         
             
             <a href="/tags/#html" title="html" rel="2">html</a>
+            
+        
+            
+            <a href="/tags/#js" title="js" rel="2">js</a>
+            
+        
             
         
             
@@ -583,23 +769,23 @@ js部分
     <ul>
       
         <li>
-          <a href="/2017/03/22/password/">浏览器自动填充表单问题</a>
+          <a href="/2019/01/11/operator/">位运算符</a>
         </li>
       
         <li>
-          <a href="/2016/12/23/slide/">基于面向对象轮播图插件</a>
+          <a href="/2019/01/08/throttle/">js 节流函数</a>
         </li>
       
         <li>
-          <a href="/2016/08/01/ruby-rvm-jekyll/">ruby,rvm,jekyll的安装</a>
+          <a href="/2018/07/19/css/">论css的重要性</a>
         </li>
       
         <li>
-          <a href="/2016/07/21/note/">note(放一些有用的小技巧)</a>
+          <a href="/2018/07/12/smallprogram/">小程序问题搜集</a>
         </li>
       
         <li>
-          <a href="/2016/07/17/12JavdScript/">12个你未必知道的JavaScript技巧</a>
+          <a href="/2018/05/19/tour/">论css的重要性</a>
         </li>
       
     </ul>
