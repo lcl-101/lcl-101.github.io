@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://lcl-101.github.io/2018/07/12/smallprogram/</loc>
+        <lastmod>2019-03-25T06:26:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lcl-101.github.io/2019/01/08/throttle/</loc>
+        <lastmod>2019-03-25T06:03:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lcl-101.github.io/2018/05/19/tour/</loc>
         <lastmod>2019-03-25T05:55:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -15,24 +31,8 @@
     </url>
 
     <url>
-        <loc>https://lcl-101.github.io/2018/07/12/smallprogram/</loc>
-        <lastmod>2019-03-25T05:52:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://lcl-101.github.io/2018/07/19/css/</loc>
         <lastmod>2019-03-25T05:50:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lcl-101.github.io/2019/01/08/throttle/</loc>
-        <lastmod>2019-03-25T05:46:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

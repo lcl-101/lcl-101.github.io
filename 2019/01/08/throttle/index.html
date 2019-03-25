@@ -220,10 +220,8 @@
                 <blockquote>
 <p>在浏览器中,会经常频繁的超控DOM,导致渲染变慢,甚至浏览器奔溃.</p>
 </blockquote>
-<ol>
-<li>测试场景<br>
-window对象的resize、scroll事件</li>
-</ol>
+<h1><span id="测试场景">测试场景</span></h1>
+<p>window对象的resize、scroll事件</p>
 <p>在《JavaScript高级程序设计》中有专门应对此问题的函数节流</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">method,context</span>)</span>&#123;</span><br><span class="line">      clearTimeout(method.tId);</span><br><span class="line">      method.tId=setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          method.call(context);</span><br><span class="line">      &#125;,<span class="number">500</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>网页<a href="https://github.com/lcl-101/example/tree/master/%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0" target="_blank" rel="noopener">demo</a></p>
@@ -266,7 +264,7 @@ window对象的resize、scroll事件</li>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">测试场景</span></a></li></ol>
         
         </div>
       </aside>

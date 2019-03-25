@@ -268,12 +268,10 @@
             
 在浏览器中,会经常频繁的超控DOM,导致渲染变慢,甚至浏览器奔溃.
 
-
 测试场景
 window对象的resize、scroll事件
-
 在《JavaScript高级程序设计》中有专门应对此问题的函数节流
-123456function throttle(method,context)&#123;      clearTimeout(method.tId);      method.tId=se......
+123456function throttle(method,context)&#123;      clearTimeout(method.tId);      method.tId=setT......
         </div>
     </a>
     
@@ -335,9 +333,7 @@ window对象的resize、scroll事件
              
         </h3>
         <div class="post-content-preview">
-            
-开发过程中收录的小程序问题
-
+            开发过程中收录的小程序问题
 
 强制要求请求全部为https
 小程序有自己定义的标签，且不支持HTML标签
@@ -349,7 +345,7 @@ web-view空白问题，请升级微信客户端到 6.5.16
 页面可以包含iframe，但是iframe的地址必须为业务域名
 兼容
 
-基础库 1.6.4 开......
+基础库 1.6.4 开始支......
         </div>
     </a>
     
