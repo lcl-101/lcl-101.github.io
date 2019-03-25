@@ -1059,3 +1059,7 @@ body {
 .archive-article.archive-type-post {
   overflow-x: visible;
 }
+.archive-article-date {
+  width: 5rem;
+  display: block;
+}
