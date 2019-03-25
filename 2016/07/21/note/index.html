@@ -208,59 +208,14 @@
 
 
     <!-- Main Content -->
-    
-<!-- Post Header -->
-<style type="text/css">
-    header.header-top {
-      display: none;
-    }
-    header.intro-header{
-        /*background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')*/
-        height: 500px;
-        overflow: hidden;
-    }
-    header iframe{
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-</style>
-<header class="intro-header">
-    <iframe src="http://yanshuo.io/assets/player/?deck=579d729579bc4400547b32ed">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <div class="tags">
-                            
-                              <a class="tag" href="/tags/javascript/" title="javascript">javascript</a>
-                            
-                              <a class="tag" href="/tags/html/" title="html">html</a>
-                            
-                              <a class="tag" href="/tags/css/" title="css">css</a>
-                            
-                        </div>
-
-                        <h1>note(放一些有用的小技巧)</h1>
-                        <h2 class="subheading">Soon learn, soon forgotten</h2>
-                        <span class="meta">
-                            Posted by lcl on
-                            2016-07-21
-                        </span>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </iframe>
-</header>
+    <!-- Modify by Yu-Hsuan Yen -->
 
 <!-- Post Content -->
 <article>
     <div class="container">
         <div class="row">
 
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
@@ -281,23 +236,24 @@
 <h3><span id="单词换行">单词换行</span></h3>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>;</span><br><span class="line"><span class="selector-tag">word-wrap</span><span class="selector-pseudo">:break-word</span>;</span><br></pre></td></tr></table></figure>
 <h3><span id="垂直剧中">垂直剧中</span></h3>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">父元素中:</span><br><span class="line">    </span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:-moz-box</span>;</span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:box</span>;</span><br><span class="line"><span class="selector-tag">-moz-box-orient</span><span class="selector-pseudo">:vertical</span>;</span><br><span class="line"><span class="selector-tag">-webkit-box-orient</span><span class="selector-pseudo">:vertical</span>;</span><br><span class="line"><span class="selector-tag">box-orient</span><span class="selector-pseudo">:vertical</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-flex</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-moz-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-webkit-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-ms-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-o-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"></span><br><span class="line">子元素中:</span><br><span class="line">    </span><br><span class="line"><span class="selector-tag">-webkit-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">-moz-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">-ms-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">-o-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">flex</span>: 10;</span><br><span class="line">    </span><br><span class="line"><span class="selector-tag">-webkit-box-flex</span><span class="selector-pseudo">:10</span>;</span><br><span class="line"><span class="selector-tag">-moz-box-flex</span><span class="selector-pseudo">:10</span>;</span><br><span class="line"><span class="selector-tag">box-flex</span><span class="selector-pseudo">:10</span>;</span><br><span class="line"><span class="comment">/* Center slide text vertically */</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-ms-flexbox</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-flex</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br><span class="line"><span class="comment">/*-webkit-box-pack: center;*/</span></span><br><span class="line"><span class="comment">/*-ms-flex-pack: center;*/</span></span><br><span class="line"><span class="comment">/*-webkit-justify-content: center;*/</span></span><br><span class="line"><span class="comment">/*justify-content: center;*/</span></span><br><span class="line"><span class="selector-tag">-webkit-box-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">-ms-flex-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">-webkit-align-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">父元素中:</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:-moz-box</span>;</span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:box</span>;</span><br><span class="line"><span class="selector-tag">-moz-box-orient</span><span class="selector-pseudo">:vertical</span>;</span><br><span class="line"><span class="selector-tag">-webkit-box-orient</span><span class="selector-pseudo">:vertical</span>;</span><br><span class="line"><span class="selector-tag">box-orient</span><span class="selector-pseudo">:vertical</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-flex</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-moz-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-webkit-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-ms-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"><span class="selector-tag">-o-flex-direction</span>: <span class="selector-tag">column</span>;</span><br><span class="line"></span><br><span class="line">子元素中:</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">-webkit-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">-moz-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">-ms-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">-o-flex</span>: 10;</span><br><span class="line"><span class="selector-tag">flex</span>: 10;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">-webkit-box-flex</span><span class="selector-pseudo">:10</span>;</span><br><span class="line"><span class="selector-tag">-moz-box-flex</span><span class="selector-pseudo">:10</span>;</span><br><span class="line"><span class="selector-tag">box-flex</span><span class="selector-pseudo">:10</span>;</span><br><span class="line"><span class="comment">/* Center slide text vertically */</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-ms-flexbox</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-flex</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br><span class="line"><span class="comment">/*-webkit-box-pack: center;*/</span></span><br><span class="line"><span class="comment">/*-ms-flex-pack: center;*/</span></span><br><span class="line"><span class="comment">/*-webkit-justify-content: center;*/</span></span><br><span class="line"><span class="comment">/*justify-content: center;*/</span></span><br><span class="line"><span class="selector-tag">-webkit-box-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">-ms-flex-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">-webkit-align-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br></pre></td></tr></table></figure>
+
+
 
                 <hr>
-
+                <!-- Pager -->
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/" data-toggle="tooltip" data-placement="top" title="ruby,rvm,jekyll的安装">&larr; Previous Post</a>
+                            <a href="/2016/08/01/ruby-rvm-jekyll/" data-toggle="tooltip" data-placement="top" title="ruby,rvm,jekyll的安装">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/" data-toggle="tooltip" data-placement="top" title="12个你未必知道的JavaScript技巧">Next Post &rarr;</a>
+                            <a href="/2016/07/17/12JavdScript/" data-toggle="tooltip" data-placement="top" title="12个你未必知道的JavaScript技巧">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
-
                 <!-- 代码1：放在页面需要展示的位置  -->
                 <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
                 <div id="cyEmoji" role="cylabs" data-use="emoji" sid="{{page.id}}" style="margin-top:20px;"></div>
@@ -310,8 +266,23 @@
                 <div id="SOHUCS" sid="{{page.id}}"></div>
             </div>
 
-    <!-- Sidebar Container -->
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">保存两位小数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">placeholder兼容到ie8</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">自由落体</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">单词换行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">垂直剧中</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+            <!-- Sidebar Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
@@ -323,7 +294,13 @@
                     <!-- no hr -->
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        <a class="tag-link" href="/tags/css/">css</a><a class="tag-link" href="/tags/git-page/">git page</a><a class="tag-link" href="/tags/html/">html</a><a class="tag-link" href="/tags/javascript/">javascript</a><a class="tag-link" href="/tags/前端/">前端</a><a class="tag-link" href="/tags/生活/">生活</a>
+                       
+                          <a class="tag" href="/tags/#javascript" title="javascript">javascript</a>
+                        
+                          <a class="tag" href="/tags/#html" title="html">html</a>
+                        
+                          <a class="tag" href="/tags/#css" title="css">css</a>
+                        
                     </div>
                 </section>
                 
@@ -335,21 +312,21 @@
                 <ul class="list-inline">
 
                     
-                        <li><a href="http://chengfangpeng.win/">X_ray</a></li>
+                        <li><a href="http://chengfangpeng.win/" target="_blank">X_ray</a></li>
                     
-                        <li><a href="http://iliubang.github.io/">刘邦</a></li>
+                        <li><a href="http://iliubang.github.io/" target="_blank">刘邦</a></li>
                     
-                        <li><a href="http://chbless.github.io/blog">陈辉</a></li>
+                        <li><a href="http://chbless.github.io/blog" target="_blank">陈辉</a></li>
                     
-                        <li><a href="https://lcl101.cn/">李成龙</a></li>
+                        <li><a href="https://lcl101.cn/" target="_blank">李成龙</a></li>
                     
                 </ul>
                 
             </div>
-
         </div>
     </div>
 </article>
+
 
 <!--畅言PC和WAP自适应版-->
 <script type="text/javascript">
@@ -360,6 +337,7 @@
     if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
   })();
 </script>
+
 
 
 <!-- async load function -->
@@ -377,9 +355,9 @@
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
         anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
