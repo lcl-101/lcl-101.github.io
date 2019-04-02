@@ -1063,4 +1063,4 @@ body {
   display: block;
 }
 /* 畅言去广告 */
-#feedAv{transform:scale(0); !important;height:0!important;margin:0!important;padding:0!important;margin-top:-50px!important;}
+#feedAv{transform:scale(0);transform:-webkit-scale(0); !important;height:0!important;margin:0!important;padding:0!important;margin-top:-50px!important;float: left;}
