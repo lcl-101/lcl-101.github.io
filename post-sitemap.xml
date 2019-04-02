@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>https://lcl-101.github.io/2016/07/12/hello2016/</loc>
+        <lastmod>2019-03-28T01:28:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lcl-101.github.io/2016/07/17/12JavdScript/</loc>
+        <lastmod>2019-03-28T01:28:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lcl-101.github.io/2016/07/21/note/</loc>
+        <lastmod>2019-03-28T01:28:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lcl-101.github.io/2018/05/19/tour/</loc>
         <lastmod>2019-03-27T09:36:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -63,32 +87,8 @@
     </url>
 
     <url>
-        <loc>https://lcl-101.github.io/2016/07/21/note/</loc>
-        <lastmod>2019-03-25T01:23:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://lcl-101.github.io/2016/08/01/ruby-rvm-jekyll/</loc>
         <lastmod>2019-03-23T06:12:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lcl-101.github.io/2016/07/17/12JavdScript/</loc>
-        <lastmod>2019-03-23T05:51:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lcl-101.github.io/2016/07/12/hello2016/</loc>
-        <lastmod>2019-03-23T05:46:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
