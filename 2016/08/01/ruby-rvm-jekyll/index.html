@@ -64,7 +64,106 @@
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-	<!-- Modified by Yu-Hsuan Yen -->
+		<div id="ProgressBar" style="position: fixed;top: 0;width: 100%;z-index: 1;line-height: 0;font-size: 0;"></div>
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Lcl Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/portfolio/">Portfolio</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+		<div id="page_content">
+			<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
@@ -107,106 +206,8 @@
     </div>
 </header>
 
-
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Lcl Blog</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-
-                    
-
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/portfolio/">Portfolio</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-                    
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-    <!-- Main Content -->
-    <!-- Modify by Yu-Hsuan Yen -->
+			<!-- Main Content -->
+			<!-- Modify by Yu-Hsuan Yen -->
 
 <!-- Post Content -->
 <article>
@@ -401,6 +402,7 @@
 </style>
 
 
+		</div>
 
     <!-- Footer -->
     <!-- Footer -->
@@ -466,6 +468,10 @@
     </div>
 </footer>
 
+<div style="display:none;">
+  <iframe src width="200" height="200" id="myframe"></iframe>
+</div>
+
 <!-- jQuery -->
 <script src="/js/jquery.min.js"></script>
 
@@ -474,7 +480,6 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
-
 
 <!-- async load function -->
 <script>
@@ -567,12 +572,97 @@
 </script>
 
 
+<script type="text/javascript">
+$(function(){
+  //changeURL 页面不刷新
+  var changeURL = function(){
+    var ajax = new XMLHttpRequest();
+    var state = {
+      title: document.title,
+      url: window.location.href,
+      content: $('#page_content').html()
+    };
+
+    // 调用数据回掉函数
+  	var ajaxCallback = function(){
+  		if(ajax.readyState == 4){
+  			// push到历史记录里，可以在点击后退时从历史记录里恢复内容
+  			// 并且无刷修改url地址
+        console.log(ajax.responseURL)
+
+        // var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
+        // $('body').find('#ProgressBar').find('svg').remove();
+        // state.content = contestHtml;
+
+        iframeLoad(state,function(res){
+          window.history.pushState(res,document.title,res.url);
+          $(window).scrollTop(0);
+          $('#page_content').html(window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML);
+          NProgress.done();
+        });
+
+        // window.history.pushState(state,document.title,ajax.responseURL);
+        // $('#page_content').html(contestHtml).show();
+  		}
+  	};
+    // 点击事件
+    $('a').click(function(event) {
+      if(window.location.href == event.target.href){return false;};
+      NProgress.start();
+      state.title = document.title;
+      state.url = event.target.href;
+      ajax.open('GET',state.url, true);
+  		ajax.onreadystatechange = ajaxCallback;
+  		ajax.send('');
+      return false;
+    });
+
+    // 记录到历史里，当点击后退按钮还退回上次页面请求前的页面内容
+    window.onpopstate = function(){
+      console.log(history)
+      $('#page_content').html(history.state.content);
+    }
+
+    // 修改当前页面在 history 中的记录
+    window.history.replaceState(state,document.title,state.url);
+    NProgress.done();
+  };
+
+  // 检测是否支持
+  try{
+    //监听事件
+    window.addEventListener('DOMContentLoaded', changeURL, false);
+  }catch(e){
+    console.log('浏览器不支持，请使用支持html5的浏览器');
+  }
+
+
+  function iframeLoad(state,fn){
+    var iframe = document.getElementById("myframe");
+    iframe.contentWindow.location.replace(state.url);   //不会产生历史记录
+    if (iframe.attachEvent){
+      iframe.attachEvent("onload", function(){
+        // alert("Local iframe is now loaded.");
+        state.content=window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML;
+        if(fn){fn(state)};
+      });
+    } else {
+      iframe.onload = function(){
+        // alert("Local iframe is now loaded.");
+        state.content=window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML;
+        if(fn){fn(state)};
+      };
+    }
+  }
+})
+</script>
+
 
 
 	<!-- <a id="rocket" href="#top" class=""></a> -->
+	<script type="text/javascript" src="/js/progressbar.min.js"></script>
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
   <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
-
 </body>
 
 </html>
