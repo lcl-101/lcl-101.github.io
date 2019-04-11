@@ -63,7 +63,7 @@
 
 
 <!-- hack iOS CSS :active style -->
-<body ontouchstart="">
+<body ontouchstart="" id='body'>
 		<div id="ProgressBar" style="position: fixed;top: 0;width: 100%;z-index: 1;line-height: 0;font-size: 0;"></div>
     <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -639,7 +639,7 @@ $(function(){
   		}
   	};
     // 点击事件
-    $('a').click(function(event) {
+    $('#body').delegate('a', 'click', function(event) {
       if(window.location.href == event.target.href){return false;};
       NProgress.start();
       state.title = document.title;
