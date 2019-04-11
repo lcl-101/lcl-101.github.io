@@ -214,19 +214,17 @@
 <p>欢迎</p>
 
 
-            <!--畅言PC和WAP自适应版-->
-            <div class="comment">
-                <div id="SOHUCS" sid="/about"></div>
-            </div>
-            <!--畅言PC和WAP自适应版-->
+            <!--PC版-->
+            <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
+            <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
             <script type="text/javascript">
-              (function(){
-                var appid = 'cysTD59xU';
-                var conf = 'prod_ce29600c8a6f4fba16719fa671806140';
-                var width = window.innerWidth || document.documentElement.clientWidth;
-                if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
-              })();
+              window.changyan.api.config({
+              appid: 'cysTD59xU',
+              conf: 'prod_ce29600c8a6f4fba16719fa671806140'
+            });
             </script>
+
+            
 
         </div>
 
@@ -595,19 +593,19 @@ $(function(){
   			// 并且无刷修改url地址
         console.log(ajax.responseURL)
 
-        // var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
-        // $('body').find('#ProgressBar').find('svg').remove();
-        // state.content = contestHtml;
+        var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
+        $('body').find('#ProgressBar').find('svg').remove();
+        state.content = contestHtml;
 
-        iframeLoad(state,function(res){
-          window.history.pushState(res,document.title,res.url);
-          $(window).scrollTop(0);
-          $('#page_content').html(window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML);
-          NProgress.done();
-        });
+        // iframeLoad(state,function(res){
+        //   window.history.pushState(res,document.title,res.url);
+        //   $(window).scrollTop(0);
+        //   $('#page_content').html(window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML);
+        //   NProgress.done();
+        // });
 
-        // window.history.pushState(state,document.title,ajax.responseURL);
-        // $('#page_content').html(contestHtml).show();
+        window.history.pushState(state,document.title,ajax.responseURL);
+        $('#page_content').html(contestHtml).show();
   		}
   	};
     // 点击事件
@@ -619,6 +617,7 @@ $(function(){
       ajax.open('GET',state.url, true);
   		ajax.onreadystatechange = ajaxCallback;
   		ajax.send('');
+      NProgress.done();
       return false;
     });
 

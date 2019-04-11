@@ -571,19 +571,19 @@ $(function(){
   			// 并且无刷修改url地址
         console.log(ajax.responseURL)
 
-        // var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
-        // $('body').find('#ProgressBar').find('svg').remove();
-        // state.content = contestHtml;
+        var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
+        $('body').find('#ProgressBar').find('svg').remove();
+        state.content = contestHtml;
 
-        iframeLoad(state,function(res){
-          window.history.pushState(res,document.title,res.url);
-          $(window).scrollTop(0);
-          $('#page_content').html(window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML);
-          NProgress.done();
-        });
+        // iframeLoad(state,function(res){
+        //   window.history.pushState(res,document.title,res.url);
+        //   $(window).scrollTop(0);
+        //   $('#page_content').html(window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML);
+        //   NProgress.done();
+        // });
 
-        // window.history.pushState(state,document.title,ajax.responseURL);
-        // $('#page_content').html(contestHtml).show();
+        window.history.pushState(state,document.title,ajax.responseURL);
+        $('#page_content').html(contestHtml).show();
   		}
   	};
     // 点击事件
@@ -595,6 +595,7 @@ $(function(){
       ajax.open('GET',state.url, true);
   		ajax.onreadystatechange = ajaxCallback;
   		ajax.send('');
+      NProgress.done();
       return false;
     });
 
