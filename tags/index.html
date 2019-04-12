@@ -225,9 +225,9 @@
                 
                     <a href="#前端" title="前端" rel="1">前端</a>
                 
-                    <a href="#小程序" title="小程序" rel="1">小程序</a>
-                
                     <a href="#play" title="play" rel="1">play</a>
+                
+                    <a href="#小程序" title="小程序" rel="1">小程序</a>
                 
             </div>
 
@@ -531,8 +531,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="小程序">
-                    <span class="tag-text">小程序</span>
+                <span class="fa fa-tag listing-seperator" id="play">
+                    <span class="tag-text">play</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -540,9 +540,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2018/07/12/smallprogram/">
+                     <a href="/2018/05/19/tour/">
                         <h2 class="post-title">
-                            小程序问题搜集
+                            天津一日游方案
                         </h2>
                         
                             <h3 class="post-subtitle">
@@ -557,8 +557,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="play">
-                    <span class="tag-text">play</span>
+                <span class="fa fa-tag listing-seperator" id="小程序">
+                    <span class="tag-text">小程序</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -566,9 +566,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2018/05/19/tour/">
+                     <a href="/2018/07/12/smallprogram/">
                         <h2 class="post-title">
-                            天津一日游方案
+                            小程序问题搜集
                         </h2>
                         
                             <h3 class="post-subtitle">
@@ -776,19 +776,19 @@ $(function(){
   			// 并且无刷修改url地址
         console.log(ajax.responseURL)
 
-        var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
-        $('body').find('#ProgressBar').find('svg').remove();
-        state.content = contestHtml;
+        // var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
+        // $('body').find('#ProgressBar').find('svg').remove();
+        // state.content = contestHtml;
 
-        // iframeLoad(state,function(res){
-        //   window.history.pushState(res,document.title,res.url);
-        //   $(window).scrollTop(0);
-        //   $('#page_content').html(window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML);
-        //   NProgress.done();
-        // });
+        iframeLoad(state,function(res){
+          window.history.pushState(res,document.title,res.url);
+          $(window).scrollTop(0);
+          $('#page_content').html(window.frames['myframe'].contentWindow.document.getElementById("page_content").innerHTML);
+          NProgress.done();
+        });
 
-        window.history.pushState(state,document.title,ajax.responseURL);
-        $('#page_content').html(contestHtml).show();
+        // window.history.pushState(state,document.title,ajax.responseURL);
+        // $('#page_content').html(contestHtml).show();
   		}
   	};
     // 点击事件
