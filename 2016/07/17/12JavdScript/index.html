@@ -593,8 +593,6 @@ $(function(){
   		if(ajax.readyState == 4){
   			// push到历史记录里，可以在点击后退时从历史记录里恢复内容
   			// 并且无刷修改url地址
-        console.log(ajax.responseURL)
-
         // var contestHtml = $('#page_content').hide().html(ajax.response).find('#page_content').html();
         // $('body').find('#ProgressBar').find('svg').remove();
         // state.content = contestHtml;
@@ -619,7 +617,6 @@ $(function(){
       ajax.open('GET',state.url, true);
   		ajax.onreadystatechange = ajaxCallback;
   		ajax.send('');
-      NProgress.done();
       return false;
     });
 
