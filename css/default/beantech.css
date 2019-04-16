@@ -1069,10 +1069,13 @@ body {
   opacity: 0;
   height: 10px!important;
 }
-
 #pic_container {
   display: none!important;
 }
+.pop_ad {
+  display: none!important;
+}
+
 
 /* nprogress */
 #nprogress {
