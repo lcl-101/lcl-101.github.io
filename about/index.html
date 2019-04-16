@@ -99,14 +99,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -224,10 +224,9 @@
                 var appid = 'cysTD59xU';
                 var conf = 'prod_ce29600c8a6f4fba16719fa671806140';
                 var width = window.innerWidth || document.documentElement.clientWidth;
-                if (!width) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("/js/changyan/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
-              })();
+                if (width < 960) {
+                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
             </script>
-
         </div>
 
         <!-- Sidebar Container -->
@@ -251,17 +250,17 @@
             
         
             
-            <a href="/tags/#html" title="html" rel="2">html</a>
-            
-        
-            
             <a href="/tags/#css" title="css" rel="2">css</a>
             
         
             
-            <a href="/tags/#js" title="js" rel="2">js</a>
+        
+            
+            <a href="/tags/#html" title="html" rel="2">html</a>
             
         
+            
+            <a href="/tags/#js" title="js" rel="2">js</a>
             
         
             
