@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Hello 2016 - 李成龙的博客 | Lcl Blog
+          李成龙的博客 | Lcl Blog
         
     </title>
 
-    <link rel="canonical" href="https://lcl-101.github.io/2016/07/12/hello2016/">
+    <link rel="canonical" href="https://lcl-101.github.io/demo/demo.html">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -171,8 +171,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('post-bg-2015.jpg')
-            /*post*/
+            background-image: url('/img/404-bg.jpg')
+            /*page*/
         
     }
     
@@ -185,18 +185,10 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="post-heading">
-                        <div class="tags">
-                            
-                              <a class="tag" href="/tags/#生活" title="生活">生活</a>
-                            
-                        </div>
-                        <h1>Hello 2016</h1>
-                        <h2 class="subheading"> &quot;Hello World, Hello Blog&quot;</h2>
-                        <span class="meta">
-                            Posted by lcl on
-                            2016-07-12
-                        </span>
+                    <div class="site-heading">
+                        <h1>Lcl Blog</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">测试用例</span>
                     </div>
                 
 
@@ -208,178 +200,68 @@
 </header>
 
 			<!-- Main Content -->
-			<!-- Modify by Yu-Hsuan Yen -->
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-            <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
-                <blockquote>
-<p>“It’s my style. ”</p>
-</blockquote>
-<h2><span id="前言">前言</span><a href="#前言" class="header-anchors">#</a></h2>
-<p>研究了好一会，终于把博客开通了，在这里很感谢hux提供的模版，供我们参考。</p>
-<p><a href="#build">跳过废话，直接看技术实现 </a></p>
-<p>2016 年，Lcl的博客终于开通了。</p>
-<p>从开始工作，就一想做一些的东西，但在大众博客上感觉没有大多意思，就像自己做一些东西，研究研究，正好github提供了这个平台，github page，对于程序员来说，这个着实有趣，自己用了两天的时间把它弄了清楚，下面就介绍是如何实现的。</p>
-<hr>
-<h2><span id="正文">正文</span><a href="#正文" class="header-anchors">#</a></h2>
-<p>接下来说说搭建这个博客的技术细节。</p>
-<p>正好之前就有关注过 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> + <a href="http://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> 快速 Building Blog 的技术方案，非常轻松时尚。</p>
-<p>其优点非常明显：</p>
-<ul>
-<li><strong>Markdown</strong> 带来的优雅写作体验，我自己用的的mac本，所以提供一个免费的编写软件（MWeb Lite），用这个来写，确实很方便，可以一边编辑，一边看到自己写的内容，已经排版好的，重点是这款软件是完全免费的。</li>
-<li>非常熟悉的 Git workflow ，<strong>Git Commit 即 Blog Post</strong></li>
-<li>利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
-<ul>
-<li>如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了</li>
-</ul>
-</li>
-<li>Jekyll 的自定制非常容易，基本就是个模版引擎</li>
-</ul>
-<p>在这里提供hux提供的模版，对于新手来说，可是很快的上手<a href="http://huxpro.coding.me" target="_blank" rel="noopener">镜像</a>，网上还有很多jekll的模版，可以选一个自己喜欢的下载使用。</p>
-<hr>
-<p>配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手</p>
-<p>大的 Jekyll 主题上直接 fork 了 Clean Blog（这个主题也相当有名，就不多赘述了。唯一的缺点大概就是没有标签支持，于是我给它补上了。）</p>
-<p>本地调试环境需要 <code>gem install jekyll</code>，但在这里有个坑，ruby被墙了，不过有万能的网友提供了解决办法，<code>sudo gem install jekll --user--install</code>,换成这句话后，很顺利的就安装成功了。</p>
-<h2><span id="后记">后记</span><a href="#后记" class="header-anchors">#</a></h2>
-<p>希望你们能喜欢我的博客</p>
-<p>—— lcl 后记于 2016.7</p>
-
-
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2016/07/17/12JavdScript/" data-toggle="tooltip" data-placement="top" title="12个你未必知道的JavaScript技巧">&larr; Previous Post</a>
-                        </li>
-                    
-                    
-                </ul>
-                <!-- 代码1：放在页面需要展示的位置  -->
-                <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
-                <div id="cyEmoji" role="cylabs" data-use="emoji" sid="2016/07/12/hello2016/" style="margin-top:20px;"></div>
-                <!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
-                <!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
-                <!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
-                <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
-                <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysTD59xU"></script>
-                <!--畅言PC和WAP自适应版-->
-                <div id="SOHUCS" sid="2016/07/12/hello2016/"></div>
-            </div>
-
-            <!-- Tabe of Content -->
-            <!-- Table of Contents -->
-
-    
-      <aside id="sidebar">
-        <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#前言"><span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#正文"><span class="toc-nav-text">正文</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#后记"><span class="toc-nav-text">后记</span></a></li></ol>
-        
-        </div>
-      </aside>
-    
-
-
-
-            <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                       
-                          <a class="tag" href="/tags/#生活" title="生活">生活</a>
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Friends Blog -->
-                
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-
-                    
-                        <li><a href="http://chengfangpeng.win/" target="_blank">X_ray</a></li>
-                    
-                        <li><a href="http://iliubang.github.io/" target="_blank">刘邦</a></li>
-                    
-                        <li><a href="http://chbless.github.io/blog" target="_blank">陈辉</a></li>
-                    
-                        <li><a href="https://lcl101.cn/" target="_blank">李成龙</a></li>
-                    
-                </ul>
-                
-            </div>
-        </div>
-    </div>
-</article>
-
-
-<!--畅言PC和WAP自适应版-->
-<script type="text/javascript">
-  (function(){
-    var appid = 'cysTD59xU';
-    var conf = 'prod_ce29600c8a6f4fba16719fa671806140';
-    var width = window.innerWidth || document.documentElement.clientWidth;
-    if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
-  })();
-</script>
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+			<style>
+    .main-box {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
     }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'hover',
-          placement: 'left',
-          icon: 'ℬ'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link{
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top : -0.1em;
-        }
+    .qing-transform {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: green;
+    }
+    #btn {
+        position: absolute;
+        left: 40%;
     }
 </style>
 
+<div class="main-box">
+    <div class="qing-transform"></div>
+</div>
+
+<button id="btn">开始</button>
+<script>
+    var flag = true;
+    var btn = document.getElementById("btn");
+    function bounce(t){
+        var ts=t * t * 8.0;
+        return ts;
+    }
+    function getInterpolation(t){
+        var t = t*1.1226;
+        if(t<0.3535){
+            return bounce(t);
+        }else if(t < 0.7408){
+            return bounce(t - 0.54719) + 0.7;
+        }else if(t < 0.9644){
+            return bounce(t - 0.8526) + 0.9;
+        }else {
+            return bounce(t - 1.0435) + 0.95;
+        }
+    }
+
+    btn.onclick = function (){
+        if(flag){
+            var tt=0;
+            setInterval(function(){
+                tt++;
+                if(tt>=1000){
+                    return;
+                }
+                var s= -500*getInterpolation(tt / 1000)+500;
+                $('.qing-transform').show().css({bottom: s +'px'})
+            },1)
+            flag = false;
+        }
+    }
+</script>
 
 		</div>
 
